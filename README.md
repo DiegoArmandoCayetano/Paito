@@ -1,3 +1,91 @@
+Fases de Desarrollo
+
+FASE 1 - ANÁLISIS
+
+Objetivo:
+Conectar clientes que necesitan música para eventos con músicos disponibles.
+
+Roles:
+
+Cliente
+Músico
+Administrador (opcional)
+
+FASE 2 - CASOS DE USO
+
+Cliente:
+
+Registrarse
+Iniciar sesión
+Buscar músicos
+Ver perfil de músico
+Solicitar contratación
+Ver solicitudes realizadas
+
+Músico:
+
+Registrarse
+Crear perfil musical
+Editar perfil
+Aceptar solicitudes
+Rechazar solicitudes
+
+FASE 3 - DISEÑO DE INTERFACES
+
+Pantallas:
+
+Login
+Registro
+Inicio
+Lista de músicos
+Perfil de músico
+Crear solicitud
+Mis solicitudes
+Panel del músico
+
+FASE 4 - MODELO DE DOMINIO
+
+Entidades principales:
+
+Usuario
+Músico
+Instrumento
+Solicitud
+Evento
+
+FASE 5 - BASE DE DATOS MYSQL
+
+Crear el modelo relacional una vez estén definidas todas las entidades y relaciones.
+
+FASE 6 - BACKEND SPRING BOOT
+
+Configurar proyecto
+Configurar MySQL
+Configurar JPA
+Configurar Security
+Configurar JWT
+
+FASE 7 - IMPLEMENTACIÓN
+
+Registro
+Login
+CRUD de músicos
+Búsqueda de músicos
+Solicitudes
+Aceptar/Rechazar solicitudes
+
+FASE 8 - PRUEBAS
+
+Postman
+Validaciones
+Seguridad
+
+FASE 9 - DOCUMENTACIÓN
+
+Swagger
+README
+Diagrama de clases
+Diagrama entidad-relación
 
 Arquitectura Hexagonal (Ports & Adapters)
 
