@@ -6,15 +6,15 @@ La plataforma busca facilitar el proceso de búsqueda, contratación y gestión 
 
 ---
 
-## 🚀 Objetivo
+# 🚀 Objetivo
 
 Crear una plataforma digital que permita a los clientes encontrar y contratar servicios musicales de manera rápida, segura y organizada, mientras los artistas pueden promocionar sus servicios y gestionar sus contrataciones.
 
 ---
 
-## 👥 Tipos de Usuarios
+# 👥 Tipos de Usuarios
 
-### Cliente
+## Cliente
 
 Personas que buscan contratar servicios musicales para:
 
@@ -26,7 +26,7 @@ Personas que buscan contratar servicios musicales para:
 * Fiestas privadas
 * Otros eventos
 
-#### Funcionalidades
+### Funcionalidades
 
 * Registro e inicio de sesión.
 * Búsqueda de músicos y agrupaciones.
@@ -38,7 +38,7 @@ Personas que buscan contratar servicios musicales para:
 
 ---
 
-### Músico / Agrupación
+## Músico / Agrupación
 
 Incluye:
 
@@ -48,7 +48,7 @@ Incluye:
 * Bandas
 * DJs
 
-#### Funcionalidades
+### Funcionalidades
 
 * Registro e inicio de sesión.
 * Creación y edición de perfil profesional.
@@ -61,9 +61,9 @@ Incluye:
 
 ---
 
-### Administrador
+## Administrador
 
-#### Funcionalidades
+### Funcionalidades
 
 * Gestión de usuarios.
 * Gestión de músicos y agrupaciones.
@@ -75,7 +75,7 @@ Incluye:
 
 ---
 
-## 📋 Modelo de Contratación
+# 📋 Modelo de Contratación
 
 Los clientes podrán crear solicitudes detalladas indicando:
 
@@ -91,7 +91,7 @@ Los músicos podrán visualizar las solicitudes y responder según su disponibil
 
 ---
 
-## 🎼 Paquetes de Servicios
+# 🎼 Paquetes de Servicios
 
 Los músicos podrán ofrecer diferentes paquetes, por ejemplo:
 
@@ -109,7 +109,7 @@ Cada paquete incluirá:
 
 ---
 
-## ⭐ Sistema de Calificaciones
+# ⭐ Sistema de Calificaciones
 
 Después de cada contratación, los clientes podrán:
 
@@ -119,7 +119,7 @@ Después de cada contratación, los clientes podrán:
 
 ---
 
-## 📸 Portafolio Multimedia
+# 📸 Portafolio Multimedia
 
 Los músicos podrán mostrar su trabajo mediante:
 
@@ -130,7 +130,7 @@ Los músicos podrán mostrar su trabajo mediante:
 
 ---
 
-## 🎯 Alcance Inicial
+# 🎯 Alcance Inicial
 
 La primera versión de Paito Eventos estará enfocada en la ciudad de Cúcuta.
 
@@ -138,7 +138,7 @@ Posteriormente se proyecta expandir la plataforma a nivel nacional en Colombia.
 
 ---
 
-## 💰 Modelo de Negocio
+# 💰 Modelo de Negocio
 
 Paito Eventos buscará generar ingresos mediante:
 
@@ -149,9 +149,9 @@ Paito Eventos buscará generar ingresos mediante:
 
 ---
 
-## 🛠️ Tecnologías Planeadas
+# 🛠️ Tecnologías Planeadas
 
-### Backend
+## Backend
 
 * Java
 * Spring Boot
@@ -159,11 +159,11 @@ Paito Eventos buscará generar ingresos mediante:
 * Spring Data JPA
 * JWT
 
-### Base de Datos
+## Base de Datos
 
 * MySQL
 
-### Herramientas
+## Herramientas
 
 * Maven
 * Git
@@ -173,102 +173,123 @@ Paito Eventos buscará generar ingresos mediante:
 
 ---
 
-## 📌 Estado del Proyecto
+# 📌 Estado del Proyecto
 
 🚧 Fase de análisis y diseño funcional.
 
+---
 
-Fases de Desarrollo
+# 🗺️ Roadmap de Desarrollo
 
-FASE 1 - ANÁLISIS
+## FASE 1 - ANÁLISIS
 
-Objetivo:
+### Objetivo
+
 Conectar clientes que necesitan música para eventos con músicos disponibles.
 
-Roles:
+### Roles
 
-Cliente
-Músico
-Administrador (opcional)
+* Cliente
+* Músico
+* Administrador
 
-FASE 2 - CASOS DE USO
+---
 
-Cliente:
+## FASE 2 - CASOS DE USO
 
-Registrarse
-Iniciar sesión
-Buscar músicos
-Ver perfil de músico
-Solicitar contratación
-Ver solicitudes realizadas
+### Cliente
 
-Músico:
+* Registrarse
+* Iniciar sesión
+* Buscar músicos
+* Ver perfil de músico
+* Solicitar contratación
+* Ver solicitudes realizadas
 
-Registrarse
-Crear perfil musical
-Editar perfil
-Aceptar solicitudes
-Rechazar solicitudes
+### Músico
 
-FASE 3 - DISEÑO DE INTERFACES
+* Registrarse
+* Crear perfil musical
+* Editar perfil
+* Aceptar solicitudes
+* Rechazar solicitudes
 
-Pantallas:
+---
 
-Login
-Registro
-Inicio
-Lista de músicos
-Perfil de músico
-Crear solicitud
-Mis solicitudes
-Panel del músico
+## FASE 3 - DISEÑO DE INTERFACES
 
-FASE 4 - MODELO DE DOMINIO
+### Pantallas
 
-Entidades principales:
+* Login
+* Registro
+* Inicio
+* Lista de músicos
+* Perfil de músico
+* Crear solicitud
+* Mis solicitudes
+* Panel del músico
 
-Usuario
-Músico
-Instrumento
-Solicitud
-Evento
+---
 
-FASE 5 - BASE DE DATOS MYSQL
+## FASE 4 - MODELO DE DOMINIO
+
+### Entidades Principales
+
+* Usuario
+* Músico
+* Instrumento
+* Solicitud
+* Evento
+
+---
+
+## FASE 5 - BASE DE DATOS MYSQL
 
 Crear el modelo relacional una vez estén definidas todas las entidades y relaciones.
 
-FASE 6 - BACKEND SPRING BOOT
+---
 
-Configurar proyecto
-Configurar MySQL
-Configurar JPA
-Configurar Security
-Configurar JWT
+## FASE 6 - BACKEND SPRING BOOT
 
-FASE 7 - IMPLEMENTACIÓN
+* Configurar proyecto
+* Configurar MySQL
+* Configurar JPA
+* Configurar Security
+* Configurar JWT
 
-Registro
-Login
-CRUD de músicos
-Búsqueda de músicos
-Solicitudes
-Aceptar/Rechazar solicitudes
+---
 
-FASE 8 - PRUEBAS
+## FASE 7 - IMPLEMENTACIÓN
 
-Postman
-Validaciones
-Seguridad
+* Registro
+* Login
+* CRUD de músicos
+* Búsqueda de músicos
+* Solicitudes
+* Aceptar/Rechazar solicitudes
 
-FASE 9 - DOCUMENTACIÓN
+---
 
-Swagger
-README
-Diagrama de clases
-Diagrama entidad-relación
+## FASE 8 - PRUEBAS
 
-Arquitectura Hexagonal (Ports & Adapters)
+* Postman
+* Validaciones
+* Seguridad
 
+---
+
+## FASE 9 - DOCUMENTACIÓN
+
+* Swagger
+* README
+* Diagrama de clases
+* Diagrama entidad-relación
+
+---
+
+# 🏗️ Arquitectura Hexagonal (Ports & Adapters)
+
+```text
 paito-eventos
 │
 ├── domain
@@ -276,13 +297,17 @@ paito-eventos
 ├── infrastructure
 ├── presentation
 └── config
+```
 
-Desglose de cada carpeta
+---
 
-Domain
+# 📂 Estructura del Proyecto
 
-Aquí está la lógica del negocio.
+## Domain
 
+Contiene la lógica principal del negocio.
+
+```text
 domain
 │
 ├── model
@@ -299,13 +324,17 @@ domain
 └── enums
     ├── Rol.java
     └── EstadoSolicitud.java
+```
 
-Aquí NO va código de Spring.
+**Importante:** Aquí no debe existir código dependiente de Spring.
 
-7. Application
+---
 
-Contiene los casos de uso.
+## Application
 
+Contiene los casos de uso del sistema.
+
+```text
 application
 │
 ├── usecase
@@ -317,10 +346,15 @@ application
 │   └── RechazarSolicitudUseCase.java
 │
 └── service
-8. Infrastructure
+```
 
-Implementa la conexión con MariaDB.
+---
 
+## Infrastructure
+
+Implementa la persistencia y conexión con la base de datos.
+
+```text
 infrastructure
 │
 ├── persistence
@@ -338,10 +372,15 @@ infrastructure
 │       ├── UsuarioRepositoryAdapter.java
 │       ├── MusicoRepositoryAdapter.java
 │       └── SolicitudRepositoryAdapter.java
-9. Presentation
+```
 
-API REST.
+---
 
+## Presentation
+
+Exposición de la API REST.
+
+```text
 presentation
 │
 ├── controller
@@ -355,12 +394,36 @@ presentation
 │   └── response
 │
 └── mapper
-10. Config
+```
 
-Configuraciones globales.
+---
 
+## Config
+
+Configuraciones globales de la aplicación.
+
+```text
 config
 │
 ├── SecurityConfig.java
 ├── JwtConfig.java
 └── SwaggerConfig.java
+```
+
+---
+
+# 📈 Visión a Futuro
+
+* Chat entre cliente y músico.
+* Calendario de disponibilidad.
+* Integración de pagos en línea.
+* Notificaciones en tiempo real.
+* Aplicación móvil.
+* Expansión a nivel nacional.
+* Sistema de recomendaciones basado en preferencias y eventos.
+
+---
+
+## © Paito Eventos
+
+Conectando músicos y eventos en un solo lugar.
