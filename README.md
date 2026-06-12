@@ -418,9 +418,116 @@ Conectar clientes que necesitan música para eventos con músicos disponibles.
 
 ---
 
-# 🎯 Objetivo del MVP
+# 🎯 Modelo de Contratación de Paito Eventos
 
-Validar la propuesta de valor de Paito Eventos permitiendo que clientes encuentren y contacten músicos de forma sencilla, mientras los artistas gestionan su perfil profesional y las solicitudes de contratación desde una única plataforma.
+Paito Eventos combinará dos modelos de contratación para ofrecer mayor flexibilidad tanto a clientes como a músicos.
+
+---
+
+# 🚕 Opción A - Solicitudes de Contratación (Modelo tipo Uber)
+
+El cliente publica una necesidad específica para un evento.
+
+### Ejemplo
+
+> Necesito una agrupación vallenata para el sábado 15 de agosto de 7:00 PM a 11:00 PM en Cúcuta. Presupuesto: $800.000 COP.
+
+### Flujo
+
+1. El cliente crea una solicitud indicando:
+
+   * Tipo de evento.
+   * Fecha.
+   * Hora.
+   * Ubicación.
+   * Presupuesto.
+   * Descripción adicional.
+
+2. Los músicos o agrupaciones que cumplan con los requisitos podrán visualizar la solicitud.
+
+3. Los artistas interesados enviarán una propuesta u oferta.
+
+4. El cliente revisará las propuestas recibidas.
+
+5. El cliente seleccionará la oferta que mejor se adapte a sus necesidades.
+
+6. La solicitud quedará asignada al músico o agrupación seleccionada.
+
+### Ventajas
+
+* Mayor competencia entre artistas.
+* Más opciones para el cliente.
+* Posibilidad de encontrar mejores precios.
+* Ideal para eventos personalizados.
+
+---
+
+# 🎵 Opción C - Contratación por Paquetes (Modelo tipo Fiverr)
+
+Los músicos podrán publicar paquetes de servicios previamente definidos.
+
+### Ejemplos
+
+#### Serenata Romántica
+
+* Duración: 1 hora.
+* Precio: $250.000 COP.
+
+#### Mariachi
+
+* Duración: 1 hora.
+* Precio: $400.000 COP.
+
+#### Orquesta Completa
+
+* Duración: 4 horas.
+* Precio: $1.500.000 COP.
+
+### Flujo
+
+1. El músico crea uno o varios paquetes.
+2. El cliente navega entre los paquetes disponibles.
+3. El cliente selecciona el paquete deseado.
+4. Se realiza la solicitud de contratación.
+5. El músico confirma la disponibilidad.
+6. Se formaliza la contratación.
+
+### Información de un Paquete
+
+Cada paquete incluirá:
+
+* Nombre del servicio.
+* Descripción.
+* Duración.
+* Precio.
+* Cantidad de integrantes.
+* Géneros musicales.
+* Incluye sonido (Sí/No).
+* Fotografías.
+* Videos promocionales.
+
+### Ventajas
+
+* Contratación rápida.
+* Precios claros desde el inicio.
+* Menos negociación.
+* Ideal para servicios estandarizados.
+
+---
+
+# ⭐ Estrategia Recomendada para Paito Eventos
+
+Paito Eventos implementará ambos modelos de contratación:
+
+### Solicitudes Abiertas
+
+El cliente publica una necesidad específica y recibe propuestas de diferentes músicos.
+
+### Contratación Directa
+
+El cliente explora paquetes publicados por los artistas y contrata directamente el servicio que más le interese.
+
+Esta combinación permite ofrecer una experiencia flexible, similar a plataformas como Uber y Fiverr, adaptada al sector musical y de eventos.
 
 ## FASE 3 - DISEÑO DE INTERFACES
 
