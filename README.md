@@ -195,26 +195,232 @@ Conectar clientes que necesitan música para eventos con músicos disponibles.
 
 ---
 
-## FASE 2 - CASOS DE USO
-
-### Cliente
-
-* Registrarse
-* Iniciar sesión
-* Buscar músicos
-* Ver perfil de músico
-* Solicitar contratación
-* Ver solicitudes realizadas
-
-### Músico
-
-* Registrarse
-* Crear perfil musical
-* Editar perfil
-* Aceptar solicitudes
-* Rechazar solicitudes
+# 📋 Fase 2 - Casos de Uso de Paito Eventos
 
 ---
+
+# 👤 Actor: Cliente
+
+## Gestión de Cuenta
+
+* Registrarse.
+* Iniciar sesión.
+* Recuperar contraseña.
+* Cerrar sesión.
+* Editar perfil.
+
+---
+
+## Búsqueda de Servicios Musicales
+
+* Buscar músicos solistas.
+* Buscar agrupaciones.
+* Buscar orquestas.
+* Buscar bandas.
+* Buscar DJs.
+
+### Filtrar resultados por:
+
+* Categoría musical.
+* Género musical.
+* Ciudad.
+* Precio.
+* Calificación.
+* Disponibilidad.
+* Duración del evento.
+* Cantidad de público (considerando si el músico debe llevar sistema de sonido).
+
+---
+
+## Consulta de Perfiles
+
+* Ver perfil de artista.
+* Ver fotografías.
+* Ver videos.
+* Ver experiencia.
+* Ver paquetes de servicios.
+* Ver calificaciones y comentarios.
+
+---
+
+## Solicitudes de Contratación
+
+* Crear solicitud de contratación.
+* Buscar solicitud de contratación.
+* Adjuntar descripción personalizada.
+* Consultar estado de solicitud.
+* Cancelar solicitud (con mínimo 2 días de anticipación si el músico o agrupación ya aceptó).
+* Ver historial de solicitudes.
+
+---
+
+## Calificaciones
+
+* Calificar servicio recibido.
+* Escribir comentario.
+* Consultar sus propias reseñas.
+
+---
+
+# 🎵 Actor: Músico / Agrupación
+
+## Gestión de Cuenta
+
+* Registrarse.
+* Iniciar sesión.
+* Recuperar contraseña.
+* Cerrar sesión.
+* Editar perfil.
+
+---
+
+## Gestión de Perfil Profesional
+
+* Crear perfil artístico.
+* Editar información profesional.
+* Agregar experiencia.
+* Agregar instrumentos.
+* Agregar géneros musicales.
+* Subir fotografías.
+* Subir videos.
+
+---
+
+## Gestión de Paquetes
+
+* Crear paquete.
+* Buscar paquetes.
+* Editar paquete.
+* Eliminar paquete.
+* Configurar precios.
+* Configurar si el servicio incluye sonido.
+* Configurar duración.
+
+---
+
+## Gestión de Disponibilidad
+
+* Definir fechas disponibles.
+* Bloquear fechas ocupadas.
+* Actualizar agenda.
+
+---
+
+## Gestión de Contrataciones
+
+* Ver solicitudes recibidas.
+* Buscar solicitudes.
+* Ver detalles de solicitud.
+* Aceptar solicitud.
+* Rechazar solicitud.
+* Consultar historial de eventos.
+
+---
+
+## Calificaciones
+
+* Ver comentarios recibidos.
+* Ver calificación promedio.
+
+---
+
+# 🛡️ Actor: Administrador
+
+## Gestión de Usuarios
+
+* Ver usuarios registrados.
+* Buscar usuarios.
+* Editar usuarios.
+* Suspender usuarios.
+* Eliminar usuarios.
+
+---
+
+## Gestión de Artistas
+
+* Ver perfiles artísticos.
+* Buscar perfiles.
+* Verificar perfiles (Instagram, Facebook u otras redes sociales).
+* Suspender perfiles.
+* Eliminar perfiles.
+
+---
+
+## Gestión de Categorías
+
+* Crear categorías musicales.
+* Buscar categorías.
+* Editar categorías.
+* Eliminar categorías.
+
+---
+
+## Supervisión
+
+* Ver contrataciones realizadas.
+* Buscar solicitudes.
+* Ver solicitudes activas.
+* Ver actividad del sistema.
+
+---
+
+## Reportes
+
+* Generar reportes.
+* Consultar estadísticas.
+* Visualizar ingresos de la plataforma.
+
+---
+
+## Moderación
+
+* Gestionar denuncias.
+* Gestionar contenido multimedia.
+* Gestionar comentarios.
+
+---
+
+# 🔄 Casos de Uso Principales del MVP
+
+## Cliente
+
+* Registrarse.
+* Iniciar sesión.
+* Buscar artistas.
+* Ver perfil artístico.
+* Crear solicitud.
+* Cancelar solicitud.
+
+---
+
+## Músico
+
+* Registrarse.
+* Iniciar sesión.
+* Crear perfil.
+* Editar perfil.
+* Eliminar perfil.
+* Crear paquetes.
+* Editar paquetes.
+* Buscar paquetes.
+* Eliminar paquetes.
+* Ver solicitudes.
+* Aceptar solicitudes.
+* Rechazar solicitudes.
+
+---
+
+## Administrador
+
+* Gestionar usuarios.
+* Gestionar artistas.
+* Gestionar reportes.
+
+---
+
+# 🎯 Objetivo del MVP
+
+Validar la propuesta de valor de Paito Eventos permitiendo que clientes encuentren y contacten músicos de forma sencilla, mientras los artistas gestionan su perfil profesional y las solicitudes de contratación desde una única plataforma.
 
 ## FASE 3 - DISEÑO DE INTERFACES
 
