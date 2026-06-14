@@ -1,6 +1,6 @@
-# 🎵 Paito Eventos
+# 🎵 Paito
 
-Paito Eventos es una plataforma web que conecta clientes que necesitan música para sus eventos con músicos, agrupaciones, orquestas, bandas y DJs disponibles para ser contratados.
+Paito es una plataforma web que conecta clientes que necesitan música para sus eventos con músicos, agrupaciones, orquestas, bandas y DJs disponibles para ser contratados.
 
 La plataforma busca facilitar el proceso de búsqueda, contratación y gestión de servicios musicales para todo tipo de eventos, comenzando en Cúcuta y con proyección a expandirse a toda Colombia.
 
