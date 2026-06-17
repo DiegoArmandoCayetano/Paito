@@ -16,6 +16,11 @@ public class Artista {
     @Column(name = "id_usuario")
     private Integer idUsuario;
 
+    @OneToOne
+    @MapsId
+    @JoinColumn(name="id_usuario")
+    private Usuario usuario;
+
     @Column(name = "nombre_artistico", nullable=false, length = 150)
     private String nombreArtistico;
 
@@ -37,9 +42,4 @@ public class Artista {
 
     @Column(name="calificacion_promedio", precision=3, scale=2)
     private BigDecimal calificacionPromedio=BigDecimal.ZERO;
-
-    @OneToOne
-    @MapsId
-    @JoinColumn(name="id_usuario")
-    private Usuario usuario;
 }

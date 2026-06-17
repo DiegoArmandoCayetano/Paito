@@ -16,6 +16,11 @@ public class Cliente {
     @Column(name = "id_usuario")
     private Integer id_usuario;
 
+    @OneToOne
+    @MapsId//Esto le dice al JPA que el id_usuario de la entidad Uusario como PK y FK al mismo tiempo
+    @JoinColumn(name = "id_usuario")
+    private Usuario usuario;
+
     @Column(nullable=false, length=100)
     private String ciudad;
 
@@ -23,10 +28,5 @@ public class Cliente {
     private String direccion;
 
     @Column(name="fecha_creacion", nullable=false)
-    private LocalDate fechaCreacion;
-
-    @OneToOne
-    @MapsId//Esto le dice al JPA que el id_usuario de la entidad Uusario como PK y FK al mismo tiempo
-    @JoinColumn(name = "id_usuario")
-    private Usuario usuario;
+    private LocalDate fechaCreacion;    
 }
