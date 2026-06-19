@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name="solicitudes")
@@ -44,7 +45,7 @@ public class Solicitud {
     private String ciudad;
 
     @Column(nullable=false)
-    private Integer presupuesto;
+    private BigDecimal presupuesto;
 
     @Column(name="cantidad_asistentes",nullable=false)
     private Integer cantidadAsistentes;

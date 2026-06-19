@@ -23,7 +23,7 @@ public class Paquete {
     private String descripcion;
 
     @Column(nullable = false)
-    private Integer precio;
+    private BigDecimal precio;
 
     @Column(name = "duracion_hora", nullable = false, precision = 3, scale = 1)
     private BigDecimal duracionHora;

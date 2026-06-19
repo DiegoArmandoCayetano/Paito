@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import java.time.LocalDate;
+import java.math.BigDecimal;
 
 @Entity
 @Table(name="contrataciones")
@@ -31,8 +32,8 @@ public class Contratacion {
     @JoinColumn(name="id_artista", nullable=false)
     private Artista artista;
 
-    @Column(name="monto_final", nullable=false)
-    private Integer montoFinal;
+    @Column(name = "monto_final", nullable = false)
+    private BigDecimal montoFinal;
 
     @Column(name="fecha_contratacion", nullable=false)
     private LocalDate fechaContratacion;
