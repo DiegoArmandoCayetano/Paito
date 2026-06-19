@@ -1,4 +1,4 @@
-package com.proyecto.paitoEventos.entities;
+package com.proyecto.paitoEventos.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
