@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer>{
-    
+    // Spring ya sabe que este bloque maneja los datos de la tabla "usuario
 }

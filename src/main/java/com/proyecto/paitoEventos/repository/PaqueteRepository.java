@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 
 public interface PaqueteRepository extends JpaRepository<Paquete, Integer>{
-    
+    // Spring Boot implementará el CRUD de paquetes automáticamente aquí
 }
