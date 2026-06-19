@@ -13,13 +13,14 @@ import java.time.LocalDate;
 public class Oferta {
     
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id_oferta")
     private Integer idOferta;
 
     // Relación: Muchas ofertas corresponden a una Solicitud
     @ManyToOne
     @MapsId
-    @JoinColumn(name="id_solicitud")
+    @JoinColumn(name="id_solicitud", nullable=false)
     private Solicitud solicitud;
 
     // Relación: Muchas ofertas son hechas por un Artista
