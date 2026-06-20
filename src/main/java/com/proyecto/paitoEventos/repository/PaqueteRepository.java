@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 
 public interface PaqueteRepository extends JpaRepository<Paquete, Integer>{
     // Spring Boot implementará el CRUD de paquetes automáticamente aquí
+    // Ya tengo métodos como findAll(), findById(), save(), etc.
 }
