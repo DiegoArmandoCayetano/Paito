@@ -13,5 +13,11 @@ public class PaqueteService {
     @Autowired
     private PaqueteRepository paqueteRepository;
 
+    public List<Paquete> listarTodos(){
+        return paqueteRepository.findAll();
+    }
 
+    public Paquete guardar(Paquete paquete){
+        return paqueteRepository.save(paquete);
+    }
 }
