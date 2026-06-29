@@ -722,7 +722,8 @@ config
 ├── JwtConfig.java
 └── SwaggerConfig.java
 ```
-
+Ejecutar el Proyecto
+./mvnw spring-boot:run
 ---
 
 # 📈 Visión a Futuro
