@@ -3,7 +3,6 @@ package com.proyecto.paitoEventos.service;
 import com.proyecto.paitoEventos.entity.Artista;
 import com.proyecto.paitoEventos.entity.Usuario;
 import com.proyecto.paitoEventos.repository.ArtistaRepository;
-import com.proyecto.paitoEventos.repository.ClienteRepository;
 import com.proyecto.paitoEventos.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,18 +11,12 @@ import java.util.List;
 
 @Service
 public class ArtistaService {
-    
-    private final ClienteRepository clienteRepository;
 
     @Autowired
     private UsuarioRepository usuarioRepository;
     
     @Autowired
     private ArtistaRepository artistaRepository;
-
-    ArtistaService(ClienteRepository clienteRepository) {
-        this.clienteRepository = clienteRepository;
-    }
 
     public List<Artista> listarTodos(){
         return artistaRepository.findAll();

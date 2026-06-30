@@ -8,9 +8,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-
 
 @RestController
 @RequestMapping("/api/artistas")
@@ -26,7 +23,7 @@ public class ArtistaController {
         return artistaService.listarTodos();
     }
 
-    @PostMapping("path")
+    @PostMapping
     public ResponseEntity<Artista> crear(@RequestBody Artista artista) {
        
         Artista nuevoArtista = artistaService.registrarArtista(artista); 
