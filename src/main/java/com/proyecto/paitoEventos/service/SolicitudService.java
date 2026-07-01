@@ -6,6 +6,7 @@ import com.proyecto.paitoEventos.entity.Solicitud;
 import com.proyecto.paitoEventos.repository.ClienteRepository;
 import com.proyecto.paitoEventos.repository.SolicitudRepository;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,25 +32,27 @@ public class SolicitudService {
         if(!clienteRepository.existsById(idCliente)){
             throw new RuntimeException("El Cliente no existe");
         }
-
-        else{
-            // 1. Buscamos al cliente real. Si no existe, se lanza la excepción inmediatamente.
-
-            Cliente clienteExistente = clienteRepository.findById(idCliente).get();
-            // 2. ¡Aquí se hace la conexión! Le inyectamos el cliente completo a la solicitud
-            solicitud.setCliente(clienteExistente);
-            
-            //3. Asignamos los valores automáticos que planeamos
-            solicitud.setEstadoSolicitud(EstadoSolicitud.PENDIENTE);
-
-            // (Aquí asigno la fecha de creación)
-            
-            solicitud.setFechaCreacion(LocalDate.now());
-
         
-
-            // 4. Guardamos en la base de datos y retornamos
-            return solicitudRepository.save(solicitud);
+        if(solicitud.getPresupuesto() == null||solicitud.getPresupuesto().compareTo(BigDecimal.ZERO) <= 0){
+            throw new RuntimeException("El presupuesto debe ser mayor a 0");
         }
+
+        if(solicitud.getFechaEvento() == null||solicitud.getFechaEvento().isBefore(LocalDate.now().plusDays(2))){
+            throw new RuntimeException("El evento debe registrarse con al menos 2 días de anticipación.");
+        }
+        // 1. Buscamos al cliente real. Si no existe, se lanza la excepción inmediatamente.
+        Cliente clienteExistente = clienteRepository.findById(idCliente).get();
+        
+        // 2. ¡Aquí se hace la conexión! Le inyectamos el cliente completo a la solicitud
+        solicitud.setCliente(clienteExistente);
+            
+        //3. Asignamos los valores automáticos que planeamos
+        solicitud.setEstadoSolicitud(EstadoSolicitud.PENDIENTE);
+
+        solicitud.setFechaCreacion(LocalDate.now());
+        
+        // 4. Guardamos en la base de datos y retornamos
+        return solicitudRepository.save(solicitud);
+        
     }
 }

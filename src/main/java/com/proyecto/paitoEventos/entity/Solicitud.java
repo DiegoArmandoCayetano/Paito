@@ -30,7 +30,7 @@ public class Solicitud {
     private String descripcion;
 
     @Column(name="fecha_evento", nullable=false)
-    private LocalDate fehcaEvento;
+    private LocalDate fechaEvento;
 
     @Column(name="hora_inicio", nullable=false)
     private LocalTime horaInicio;
