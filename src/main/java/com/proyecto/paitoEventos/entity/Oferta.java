@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import java.time.LocalDate;
-
+import java.math.BigDecimal;
 
 @Entity
 @Table(name = "ofertas")
@@ -32,6 +32,9 @@ public class Oferta {
 
     @Column(nullable=false, columnDefinition="TEXT")
     private String mensaje;
+
+    @Column(nullable=false)
+    private BigDecimal valorOferta;
 
     @Column(name="fecha_oferta", nullable=false)
     private LocalDate fechaOferta;

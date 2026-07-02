@@ -6,6 +6,7 @@ import lombok.Setter;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.math.BigDecimal;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name="solicitudes")
@@ -30,13 +31,16 @@ public class Solicitud {
     private String descripcion;
 
     @Column(name="fecha_evento", nullable=false)
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate fechaEvento;
 
     @Column(name="hora_inicio", nullable=false)
+    @JsonFormat(pattern = "HH:mm:ss")
     private LocalTime horaInicio;
 
     @Column(name="hora_fin", nullable=false)
-    private LocalTime fechaFin;
+    @JsonFormat(pattern = "HH:mm:ss")
+    private LocalTime horaFin;
 
     @Column(nullable=false, length=255)
     private String direccion;
@@ -55,5 +59,6 @@ public class Solicitud {
     private EstadoSolicitud estadoSolicitud = EstadoSolicitud.PENDIENTE;
 
     @Column(name="fecha_creacion", nullable=false)
+    @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate fechaCreacion;
 }

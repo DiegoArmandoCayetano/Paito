@@ -17,7 +17,7 @@ public class SolicitudController {
     @Autowired
     private SolicitudService solicitudService;
     
-    @PostMapping("/cliente/{idCliente}")
+    @PostMapping("/clientes/{idCliente}")
 
     public ResponseEntity<?> crearSolicitud(@RequestBody Solicitud solicitud,
         @PathVariable Integer idCliente) {
