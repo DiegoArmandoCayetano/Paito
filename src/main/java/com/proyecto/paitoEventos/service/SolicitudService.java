@@ -1,9 +1,12 @@
 package com.proyecto.paitoEventos.service;
 
 import com.proyecto.paitoEventos.entity.Cliente;
+import com.proyecto.paitoEventos.entity.EstadoOferta;
 import com.proyecto.paitoEventos.entity.EstadoSolicitud;
+import com.proyecto.paitoEventos.entity.Oferta;
 import com.proyecto.paitoEventos.entity.Solicitud;
 import com.proyecto.paitoEventos.repository.ClienteRepository;
+import com.proyecto.paitoEventos.repository.OfertaRepository;
 import com.proyecto.paitoEventos.repository.SolicitudRepository;
 
 import java.math.BigDecimal;
@@ -12,6 +15,7 @@ import java.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.RuntimeBeanNameReference;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 
 @Service
@@ -20,6 +24,8 @@ public class SolicitudService {
     @Autowired
     private SolicitudRepository solicitudRepository;
 
+    @Autowired
+    private OfertaRepository ofertaRepository;
 
     @Autowired
     private ClienteRepository clienteRepository;
@@ -54,5 +60,31 @@ public class SolicitudService {
         // 4. Guardamos en la base de datos y retornamos
         return solicitudRepository.save(solicitud);
         
+    }
+
+    @Transactional
+    public Solicitud cancelarSolicitud(Integer idSolicitud){
+
+        if(!solicitudRepository.existsById(idSolicitud)){
+            throw new RuntimeException("La solicitud no existe");
+        }
+
+        Solicitud solicitudExistente = solicitudRepository.findById(idSolicitud).get();
+
+        if(solicitudExistente.getEstadoSolicitud()==EstadoSolicitud.ACEPTADA ||
+            solicitudExistente.getEstadoSolicitud()==EstadoSolicitud.CANCELADA ||
+             solicitudExistente.getEstadoSolicitud()==EstadoSolicitud.FINALIZADA){
+             
+                throw new RuntimeException("El evento ya se encuentra ne un estado inmodificable");
+        }
+
+        // Al declarar el método en el repositorio, 'var' ahora sabrá que esto es un List<Oferta>
+       var ofertasAsociadas = ofertaRepository.findBySolicitud(solicitudExistente);
+        for(Oferta oferta:ofertasAsociadas){
+            oferta.setEstadoOferta(EstadoOferta.RECHAZADA);
+        }
+        //Corregido: Cambiamos el estado de la solicitud y la retornamos guardada
+        solicitudExistente.setEstadoSolicitud(EstadoSolicitud.CANCELADA);
+        return solicitudRepository.save(solicitudExistente);
     }
 }

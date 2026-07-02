@@ -106,4 +106,35 @@ public class OfertaService {
         return ofertaRepository.save(ofertaElegida);
     }
 
+    /**
+     * Permite a un artista retirar su postulación de un evento (Borrado Lógico).
+     * 
+     * @param idOferta El identificador único de la oferta que se desea retirar.
+     * @return La oferta modificada con su nuevo estado actualizado.
+     */
+    @Transactional
+    public Oferta retirarOferta(Integer idOferta){
+
+        // CLÁUSULA DE GUARDA 1: Verificación de existencia rápida en la base de datos.
+        // Si el ID no corresponde a ninguna oferta, detenemos el flujo de inmediato.
+        if(!ofertaRepository.existsById(idOferta)){
+            throw new RuntimeException("La oferta no existe");
+        }
+
+        // FLUJO FELIZ - PASO 1: Recuperación de la entidad.
+        // Usamos 'var' para que el compilador deduzca automáticamente que es un objeto de tipo Oferta.
+        var ofertaRetirada = ofertaRepository.findById(idOferta).get();
+
+        // CLÁUSULA DE GUARDA 2: Validación de Regla de Negocio.
+        // El artista solo puede arrepentirse si el cliente no ha tomado una decisión.
+        // Si el estado es diferente a PENDIENTE (ej: ACEPTADA o RECHAZADA), se bloquea la acción.
+        if(ofertaRetirada.getEstadoOferta() != EstadoOferta.PENDIENTE){
+            throw new RuntimeException("Para retirar la oferta debe estar en estado 'Pendiente'");
+        }
+
+        // FLUJO FELIZ - PASO 2: Mutación y Persistencia.
+        // Cambiamos el estado (Borrado Lógico) y guardamos la entidad actualizada en el repositorio.
+        ofertaRetirada.setEstadoOferta(EstadoOferta.ANULADA); 
+        return ofertaRepository.save(ofertaRetirada);
+    }
 }
